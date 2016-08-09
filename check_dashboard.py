@@ -7,7 +7,7 @@
        如果该进程挂掉，则重启它
            因为zookeeper的缘故，在重启之前需要将zk中的dashboard信息delete掉
    python check_dashboard.py
-  使用前，
+   使用前，
      配置zk连接信息与dashboard命令
 '''
 import sys
@@ -69,4 +69,4 @@ if __name__ == '__main__':
       sys.exit(0)
    delDashboard()  #删除zk中的dashboard信息
    runDashboard()  #启动dashboard
-   #runCodisHA() #可选 启动codis-ha
+   #runCodisHA()   #可选 启动codis-ha
