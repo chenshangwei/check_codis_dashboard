@@ -22,6 +22,8 @@ dashboard_addr = "192.168.1.200:18087"
 
 dashboard_command = "/home/go/src/github.com/CodisLabs/codis/bin/codis-config -c /home/go/src/github.com/CodisLabs/codis/config.ini -L /home/go/src/github.com/CodisLabs/codis/logs/dashboard.log dashboard --addr " + str(dashboard_addr) + " &"
 
+codisha_command = "/home/go/src/github.com/ngaut/codis-ha/codis-ha -codis-config=192.168.1.200:18087 -productName=120ask"
+
 logging.basicConfig(level=logging.INFO,
                 format='%(asctime)s %(message)s',
                 datefmt='%Y-%b-%d %H:%M:%S',
@@ -44,7 +46,14 @@ def runDashboard():
    else:
       logging.info("[fail] start dashboard")
       return False
-
+def runCodisHA():
+   recode = subprocess.call(codisha_command,shell=True)
+   if recode == 0:
+      logging.info("[success] start codis-ha")
+      return True
+   else:
+      logging.info("[fail] start codis-ha")
+      return False
 def check():
    url =  "http://"+str(dashboard_addr)+"/api/overview"
    try:
@@ -60,4 +69,4 @@ if __name__ == '__main__':
       sys.exit(0)
    delDashboard()  #删除zk中的dashboard信息
    runDashboard()  #启动dashboard
-
+   #runCodisHA() #可选 启动codis-ha
