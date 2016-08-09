@@ -66,7 +66,7 @@ def check():
 
 if __name__ == '__main__':
    if check():
-      print "zk dashboard is ok"
+      print "dashboard is ok"
       sys.exit(0)
    delDashboard()  #删除zk中的dashboard信息
    runDashboard()  #启动dashboard
