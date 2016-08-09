@@ -1,3 +1,4 @@
 # check_codis_dashboard
 检测redis集群服务codis的dashboard状态
+
 check_codis_dashboard.go 尚不完备，无法使用
