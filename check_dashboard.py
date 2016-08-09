@@ -6,6 +6,7 @@
    检测codis中的dashboard进程
        如果该进程挂掉，则重启它
            因为zookeeper的缘故，在重启之前需要将zk中的dashboard信息delete掉
+   python check_dashboard.py
   使用前，
      配置zk连接信息与dashboard命令
 '''
