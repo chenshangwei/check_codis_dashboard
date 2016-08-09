@@ -7,6 +7,7 @@
 *     配置zk连接信息与dashboard命令
 *     你可能需要执行 go get github.com/samuel/go-zookeeper/zk
 * github.com/chenshangwei/check_codis_dashboard
+* @notice 编写测试中…… 
 */
 
 package main
