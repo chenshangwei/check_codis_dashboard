@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #coding:utf-8
 # pip install kazoo
+# https://github.com/chenshangwei/check_codis_dashboard/
 
 '''
    检测codis中的dashboard进程
