@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #coding:utf-8
-# pip install kazoo
+# pip install kazoo==2.0   #kazoo2.21使用了six模块在python2.7下有问题，故使用kazoo2.0版本
 # https://github.com/chenshangwei/check_codis_dashboard/
 
 '''
