@@ -1,6 +1,15 @@
 #!/usr/bin/env python
 #coding:utf-8
 # pip install kazoo==2.0   #kazoo2.21使用了six模块在python2.7下有问题，故使用kazoo2.0版本
+'''
+    pip安装模块警告InsecurePlatformWarning: A true SSLContext object is not available.
+    解决方法见：http://blog.csdn.net/henulwj/article/details/48131393/
+    
+         首先安装Python-devel libffi-devel openssl-devel
+            yum install python-devel libffi-devel openssl-devel
+         之后在安装pyopenssl ndg-httpsclient pyasn1
+            pip install pyopenssl ndg-httpsclient pyasn1
+'''
 # https://github.com/chenshangwei/check_codis_dashboard/
 
 '''
