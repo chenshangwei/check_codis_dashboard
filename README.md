@@ -9,4 +9,4 @@
 
 check_codis_dashboard.go 尚不完备，无法使用
 
-check_codis_dashboard.py 可以被使用
+check_codis_dashboard.py 可以被使用 已经在线上部署
