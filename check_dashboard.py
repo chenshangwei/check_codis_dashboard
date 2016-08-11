@@ -24,6 +24,7 @@ import sys
 import logging
 import urllib2
 import subprocess
+import time
 from kazoo.client import KazooClient
 
 zk_hosts = "192.168.1.200:2181"
@@ -57,6 +58,7 @@ def runDashboard():
       logging.info("[fail] start dashboard")
       return False
 def runCodisHA():
+   time.sleep(5) #等待dashboard启动
    recode = subprocess.call(codisha_command,shell=True)
    if recode == 0:
       logging.info("[success] start codis-ha")
